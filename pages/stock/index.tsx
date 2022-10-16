@@ -1,6 +1,6 @@
 import Layout from "@/components/Layouts/Layout";
 import withAuth from "@/components/withAuth";
-import React from "react";
+import React, { useEffect } from "react";
 import {
   DataGrid,
   GridColDef,
@@ -51,6 +51,7 @@ import {
 } from "@mui/icons-material";
 import StockCard from "@/components/StockCard";
 import { KEY_ROUTE } from "@/constants/routes";
+import { useEffectOnce } from "hooks/use-effect-once";
 
 type Props = {};
 
@@ -96,9 +97,13 @@ const Stock = ({}: Props) => {
   const [filterButtonEl, setFilterButtonEl] =
     React.useState<HTMLButtonElement | null>(null);
 
-  React.useEffect(() => {
+  useEffectOnce(() => {
     dispatch(getProducts());
-  }, [dispatch]);
+  });
+
+  // React.useEffect(() => {
+  //   dispatch(getProducts());
+  // }, [dispatch]);
 
   const showDialog = () => {
     if (selectedProduct === null) {
