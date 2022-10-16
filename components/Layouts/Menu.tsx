@@ -85,7 +85,7 @@ export default function Menu({ open, onDrawerClose }: MenuProp) {
           sx={{ backgroundColor: blue }}
         >
           <Image
-            src="" // /static/img/cm_logo.png
+            src="/static/img/cm_logo.png"
             width={200}
             height={40}
             objectFit="contain"

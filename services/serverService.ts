@@ -46,7 +46,9 @@ export const getProducts = async (keyword?: string): Promise<ProductData[]> => {
       await httpClient.get(`${URL_PATH.STOCK.PRODUCT}/keyword/${keyword}`)
     ).data;
   } else {
-    return (await httpClient.get(`${URL_PATH.STOCK.PRODUCT}`)).data;
+    let res = (await httpClient.get(`${URL_PATH.STOCK.PRODUCT}`)).data;
+    console.log("getProducts res : ", res)
+    return res;
   }
 };
 
