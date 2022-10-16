@@ -99,7 +99,7 @@ const Stock = ({}: Props) => {
 
   useEffectOnce(() => {
     dispatch(getProducts());
-  });
+  }, [dispatch]);
 
   // React.useEffect(() => {
   //   dispatch(getProducts());
