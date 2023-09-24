@@ -82,8 +82,7 @@ export default function Menu({ open, onDrawerClose }: MenuProp) {
         <Stack
           direction="row"
           alignItems="center"
-          sx={{ backgroundColor: blue }}
-        >
+          sx={{ backgroundColor: blue }}>
           <Image
             src="/static/img/cm_logo.png"
             width={200}
@@ -110,8 +109,7 @@ export default function Menu({ open, onDrawerClose }: MenuProp) {
             button
             className={
               router.pathname === KEY_ROUTE.STOCK ? "Mui-selected" : ""
-            }
-          >
+            }>
             <ListItemIcon>
               <ViewList />
             </ListItemIcon>
@@ -125,8 +123,7 @@ export default function Menu({ open, onDrawerClose }: MenuProp) {
             button
             className={
               router.pathname === KEY_ROUTE.REPORT ? "Mui-selected" : ""
-            }
-          >
+            }>
             <ListItemIcon>
               <BarChart />
             </ListItemIcon>
@@ -140,8 +137,7 @@ export default function Menu({ open, onDrawerClose }: MenuProp) {
             button
             className={
               router.pathname === KEY_ROUTE.ABOUTUS ? "Mui-selected" : ""
-            }
-          >
+            }>
             <ListItemIcon>
               <Person />
             </ListItemIcon>
